@@ -8,13 +8,13 @@ Vue.component("board-table", {
   </div>
   <div v-else id="cryptocoin-board-table">
   <div class="table-row">
-    <div class="table-column">サイズ</div>
+    <div class="table-column" style="flex: 2">サイズ</div>
     <div class="table-column">サイズ</div>
     <div class="table-column">価格</div>
     <div class="table-column">%</div>
   </div>
   <div class="table-row" v-for="(val, index) in askData" :key="'ask' + index">
-    <div class="table-column" style="align-items: center">
+    <div class="table-column" style="align-items: center; flex: 2">
       <div
         :style="{
                 width: Math.min(val / -20000, 100) + '%',
@@ -48,7 +48,7 @@ Vue.component("board-table", {
     </div>
   </div>
   <div class="table-row" v-for="(val, index) in bidData" :key="'bid' + index">
-    <div class="table-column" style="align-items: center">
+    <div class="table-column" style="align-items: center; flex: 2">
       <div
         :style="{
                 width: Math.min(val / -20000, 100) + '%',
